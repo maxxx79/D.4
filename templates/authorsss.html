@@ -1,0 +1,20 @@
+{% extends 'flatpages/default.html' %}
+
+
+<!-- Название у нас будет Product -->
+{% block title %}
+АВТОРЫ
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
+{% block content %}
+<h1>НАШИ АВТОРЫ !:</h1>
+<hr>
+   {% for i in authorss %}
+<tr>
+ <td>
+
+   <h5>{{ i.author_user.username }}</h5>
+ </td>
+{% endfor %}
+{% endblock content %}

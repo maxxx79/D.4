@@ -1,0 +1,20 @@
+{% extends 'flatpages/default.html' %}
+
+
+<!-- Название у нас будет Product -->
+{% block title %}
+КАТЕГОРИИ
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
+{% block content %}
+<h1>КАТЕГОРИИ !:</h1>
+<hr>
+   {% for i in post_category %}
+<tr>
+ <td>
+
+   <h5>{{ i.name }}</h5>
+ </td>
+{% endfor %}
+{% endblock content %}
